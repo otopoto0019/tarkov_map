@@ -1,0 +1,28 @@
+﻿<Window x:Class="TarkovMap.MapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:TarkovMap"
+        mc:Ignorable="d"
+        Topmost="True"
+        WindowStartupLocation="Manual"
+        Top="0"
+        Left="0"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        MouseDown="OnMouseDown"
+        Icon="pack://application:,,,/assets/icon/tarkovmap.ico"
+        Loaded="WindowLoaded"
+        Title="TarkovMap" Height="1080" Width="1920">
+    <Window.Resources>
+        <!-- CenterConverter の定義 -->
+        <local:CenterConverter x:Key="CenterConverter"/>
+    </Window.Resources>
+    <Canvas x:Name="MainCanvas">
+        <Image x:Name="MapImage"
+               Width="1500" Height="1080"
+               Canvas.Left="{Binding ElementName=MainCanvas, Path=ActualWidth, Converter={StaticResource CenterConverter}, ConverterParameter=1500}"
+               Canvas.Top="{Binding ElementName=MainCanvas, Path=ActualHeight, Converter={StaticResource CenterConverter}, ConverterParameter=1080}"/>
+    </Canvas>
+</Window>

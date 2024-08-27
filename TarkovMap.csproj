@@ -5,6 +5,40 @@
         <TargetFramework>net8.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <ApplicationIcon>assets\icon\tarkovmap.ico</ApplicationIcon>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="assets\maps\customs.jpg" />
+      <Resource Include="assets\maps\customs.jpg" />
+      <None Remove="assets\maps\factory.jpg" />
+      <Resource Include="assets\maps\factory.jpg" />
+      <None Remove="assets\maps\labs.jpg" />
+      <Resource Include="assets\maps\labs.jpg" />
+      <None Remove="assets\maps\interchange.jpg" />
+      <Resource Include="assets\maps\interchange.jpg" />
+      <None Remove="assets\maps\groundzero.jpg" />
+      <Resource Include="assets\maps\groundzero.jpg" />
+      <None Remove="assets\maps\lighthouse.jpg" />
+      <Resource Include="assets\maps\lighthouse.jpg" />
+      <None Remove="assets\maps\reserve.jpg" />
+      <Resource Include="assets\maps\reserve.jpg" />
+      <None Remove="assets\maps\shoreline.jpg" />
+      <Resource Include="assets\maps\shoreline.jpg" />
+      <None Remove="assets\maps\sot.jpg" />
+      <Resource Include="assets\maps\sot.jpg" />
+      <None Remove="assets\maps\woods.jpg" />
+      <Resource Include="assets\maps\woods.jpg" />
+      <None Remove="assets\icon\tarkovmap.ico" />
+      <Resource Include="assets\icon\tarkovmap.ico">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+        <PackageReference Include="System.Windows.Forms" Version="4.0.0" />
+        <PackageReference Include="Microsoft.Windows.Compatibility" Version="4.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="t\" />
+    </ItemGroup>
 
 </Project>

@@ -5,7 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TarkovMap"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-    </Grid>
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Topmost="True"
+        ResizeMode="NoResize"
+        WindowStartupLocation="Manual"
+        Top="0"
+        Left="1624"
+        Loaded="WindowLoaded"
+        Icon="pack://application:,,,/assets/icon/tarkovmap.ico"
+        Title="TarkovMap" Height="42" Width="128">
+    <Border BorderBrush="White" BorderThickness="2" Background="Transparent">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="ExitButton" Content="Exit" Width="52" Height="24" Click="HandleExitButton" Grid.Column="1"/>
+            <Button x:Name="MapsButton" Content="Maps" Width="52" Height="24" Click="HandleMapsButton" Grid.Column="0"/>
+        </Grid>
+    </Border>
 </Window>
