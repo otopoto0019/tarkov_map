@@ -35,10 +35,10 @@
       </Resource>
         <PackageReference Include="System.Windows.Forms" Version="4.0.0" />
         <PackageReference Include="Microsoft.Windows.Compatibility" Version="4.0.0" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="t\" />
+        <None Remove="assets\sounds\な何やってんだミカァ！(一期).wav" />
+        <Resource Include="assets\sounds\na.wav">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Resource>
     </ItemGroup>
 
 </Project>
